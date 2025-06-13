@@ -1,0 +1,66 @@
+ body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('test.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: red; /* Fallback color for debugging */
+        }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+
+    .content {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
