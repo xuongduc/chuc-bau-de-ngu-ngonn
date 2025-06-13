@@ -15,6 +15,17 @@
   <div class="content">
     <div class="image-container">
       <img src="tl.webp" alt="Image" />
+      <button type="button" onclick="playSound()">Play Sound</button>
+
+<audio id="sound" src="sound.mp4"></audio>
+
+<script>
+  function playSound() {
+    const sound = document.getElementById("sound");
+    sound.play();
+  }
+</script>
+
     </div>
   </div>
 </body>
